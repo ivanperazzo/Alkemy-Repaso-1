@@ -12,7 +12,8 @@ namespace Repaso_1.Models
         public string Name { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
-        public Posts Posts { get; set; }
-        public Comments Comments { get; set; }
+
+        public ICollection<Posts> Posts { get; set; }
+        public ICollection<Comments> Comments { get; set; }
     }
 }
