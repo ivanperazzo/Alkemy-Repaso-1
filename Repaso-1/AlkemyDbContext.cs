@@ -18,5 +18,9 @@ namespace Repaso_1
         public DbSet<User> Users { get; set; }
         public DbSet<Posts> Posts { get; set; }
         public DbSet<Comments> Comments { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=.\ISTEA;Database=AlkemyDB;Trusted_Connection=True;");
+        }
     }
 }
